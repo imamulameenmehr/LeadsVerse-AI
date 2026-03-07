@@ -1,6 +1,6 @@
 # Leadsverse AI - Open Source CRM Platform
 
-![Leadsverse AI Header](https://via.placeholder.com/1200x400/121212/d9ff54?text=Leadsverse+AI)
+![Leadsverse AI Dashboard](https://drive.google.com/uc?export=view&id=1RWht1rAS9LIp-iQ7ExTtePBj5Kx9fchX)
 
 **Leadsverse AI** is a cutting-edge, open-source Customer Relationship Management (CRM) platform designed to supercharge your sales teams. It combines a sleek, premium dark-mode interface with intelligent AI-driven outreach capabilities, allowing your Extractors and Closers to focus entirely on converting leads into revenue without the pain of manual data entry.
 
@@ -36,6 +36,51 @@ Track over 20+ specific data points per lead, including:
 - Secure User Profiles handling (change names, cities, phone numbers).
 - **Graceful Deletion**: Deleting staff members does *not* corrupt your historical data. Their logged activities and assigned leads are safely detached and preserved.
 - Custom toast notifications (`react-hot-toast`) and secure destructive confirmation modals instead of boring browser alerts.
+
+---
+
+## 📸 Application Gallery
+
+<details>
+<summary><b>Click to View Extensive UI Screenshots</b></summary>
+
+### 📊 Main Dashboard
+![Dashboard](https://drive.google.com/uc?export=view&id=1RWht1rAS9LIp-iQ7ExTtePBj5Kx9fchX)
+
+### 👥 All Leads Board
+![All Leads](https://drive.google.com/uc?export=view&id=1sSjKgIEcBMeCPTUFaYMs6tL3Y4pzjNzT)
+
+### 📈 Sales Pipeline
+![Pipeline](https://drive.google.com/uc?export=view&id=1gPPwnPUPp7VBhhT_HX5YubY1eLmdGA4_)
+
+### 📉 Analytics & Metrics
+![Analytics](https://drive.google.com/uc?export=view&id=10PAPSw8V9nSfXKS9gEz-O0pnNnmCpbol)
+
+### 🔍 Lead 360° View (Info Tab)
+![Lead Info](https://drive.google.com/uc?export=view&id=1IQcjfjburVdClQ9QAjtJJ03z2PpUz_S9)
+
+### ⚡ Lead Activity Feed & AI Logging
+![Lead Activity](https://drive.google.com/uc?export=view&id=188r8RZiPrwij2W2U258lg8Pu8_-E5aai)
+
+### 💰 Lead Financials & Quotations
+![Lead Financials](https://drive.google.com/uc?export=view&id=16K6TrS1dddOpXrPqtk-hmP0_TanwcZuz)
+
+### 📓 Lead Notes Hub
+![Lead Notes](https://drive.google.com/uc?export=view&id=1rU7-JD5OKek4bl-nibAxBN42eX_Vb1WP)
+
+### ➕ Pipeline Data Entry (New Lead)
+![New Lead Form](https://drive.google.com/uc?export=view&id=1uSiTCF5R2dsLF8nojnXkdv90tYqbQtPp)
+
+### 📝 Editing Real-Time Lead Data
+![Lead Edit](https://drive.google.com/uc?export=view&id=12lOnkjRlYx78Uxtvg-J67nyrZjCUhyDi)
+
+### ⚙️ Workspace Administration & Settings
+![Settings](https://drive.google.com/uc?export=view&id=1aZ4moyqLP4mh7X7bhgxE65Fu_qYNw9kR)
+
+### 👨‍💻 User Profile Management
+![User Profile](https://drive.google.com/uc?export=view&id=14319Uh4u8FFSkbYdhdNjkqrqW-fYLPmD)
+
+</details>
 
 ---
 
