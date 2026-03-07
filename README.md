@@ -139,14 +139,14 @@ To match the repository code, run the following SQL snippet inside your Supabase
 CREATE TABLE public.activities (
   id uuid NOT NULL DEFAULT gen_random_uuid(),
   lead_id uuid NOT NULL,
-  user_id uuid NOT NULL,
+  user_id uuid,
   type text NOT NULL CHECK (type = ANY (ARRAY['call'::text, 'sms'::text, 'email'::text, 'note'::text, 'stage_change'::text, 'whatsapp'::text, 'instagram_dm'::text, 'linkedin_dm'::text, 'facebook_dm'::text, 'twitter_dm'::text, 'tiktok_dm'::text, 'meeting'::text, 'demo'::text, 'voicemail'::text, 'no_answer'::text, 'follow_up'::text])),
   outcome text,
   follow_up_date timestamp with time zone,
   created_at timestamp with time zone DEFAULT now(),
   CONSTRAINT activities_pkey PRIMARY KEY (id),
   CONSTRAINT activities_lead_id_fkey FOREIGN KEY (lead_id) REFERENCES public.leads(id),
-  CONSTRAINT activities_user_id_fkey FOREIGN KEY (user_id) REFERENCES public.profiles(id)
+  CONSTRAINT activities_user_id_fkey FOREIGN KEY (user_id) REFERENCES public.profiles(id) ON DELETE SET NULL
 );
 
 CREATE TABLE public.leads (
