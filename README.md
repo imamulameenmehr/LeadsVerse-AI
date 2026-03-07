@@ -130,6 +130,80 @@ npm run dev
 ```
 Navigate to `http://localhost:3000` to start exploring your CRM.
 
+### 4. Database Setup
+To match the repository code, run the following SQL snippet inside your Supabase **SQL Editor** to structure your remote database properly:
+```sql
+-- WARNING: This schema is for context only and is not meant to be run.
+-- Table order and constraints may not be valid for execution.
+
+CREATE TABLE public.activities (
+  id uuid NOT NULL DEFAULT gen_random_uuid(),
+  lead_id uuid NOT NULL,
+  user_id uuid NOT NULL,
+  type text NOT NULL CHECK (type = ANY (ARRAY['call'::text, 'sms'::text, 'email'::text, 'note'::text, 'stage_change'::text, 'whatsapp'::text, 'instagram_dm'::text, 'linkedin_dm'::text, 'facebook_dm'::text, 'twitter_dm'::text, 'tiktok_dm'::text, 'meeting'::text, 'demo'::text, 'voicemail'::text, 'no_answer'::text, 'follow_up'::text])),
+  outcome text,
+  follow_up_date timestamp with time zone,
+  created_at timestamp with time zone DEFAULT now(),
+  CONSTRAINT activities_pkey PRIMARY KEY (id),
+  CONSTRAINT activities_lead_id_fkey FOREIGN KEY (lead_id) REFERENCES public.leads(id),
+  CONSTRAINT activities_user_id_fkey FOREIGN KEY (user_id) REFERENCES public.profiles(id)
+);
+
+CREATE TABLE public.leads (
+  id uuid NOT NULL DEFAULT gen_random_uuid(),
+  business_name text NOT NULL,
+  owner_name text,
+  phone_primary text,
+  phone_secondary text,
+  email_primary text,
+  email_secondary text,
+  website text,
+  city text,
+  state text,
+  address text,
+  rating numeric,
+  total_reviews integer,
+  client_type text,
+  lead_source text,
+  lead_score integer DEFAULT 0,
+  pain_point text,
+  notes text,
+  assigned_to uuid,
+  stage text NOT NULL DEFAULT 'new'::text CHECK (stage = ANY (ARRAY['new'::text, 'contacted'::text, 'decision_maker'::text, 'interested'::text, 'demo_scheduled'::text, 'proposal_sent'::text, 'closed_won'::text, 'closed_lost'::text])),
+  proposed_solution text,
+  quoted_price numeric DEFAULT 0,
+  client_budget numeric DEFAULT 0,
+  probability_percent integer DEFAULT 0 CHECK (probability_percent >= 0 AND probability_percent <= 100),
+  expected_mrr numeric DEFAULT round(((quoted_price * (probability_percent)::numeric) / 100.0), 2),
+  created_at timestamp with time zone DEFAULT now(),
+  updated_at timestamp with time zone DEFAULT now(),
+  last_activity_at timestamp with time zone,
+  next_follow_up_at timestamp with time zone,
+  emails jsonb DEFAULT '[]'::jsonb,
+  phones jsonb DEFAULT '[]'::jsonb,
+  social_links jsonb DEFAULT '[]'::jsonb,
+  industry text,
+  company_size text,
+  annual_revenue text,
+  lead_status text,
+  priority text,
+  expected_close_date date,
+  CONSTRAINT leads_pkey PRIMARY KEY (id),
+  CONSTRAINT leads_assigned_to_fkey FOREIGN KEY (assigned_to) REFERENCES public.profiles(id)
+);
+
+CREATE TABLE public.profiles (
+  id uuid NOT NULL,
+  full_name text NOT NULL,
+  role text NOT NULL DEFAULT 'closer'::text CHECK (role = ANY (ARRAY['admin'::text, 'closer'::text, 'extractor'::text])),
+  created_at timestamp with time zone DEFAULT now(),
+  phone text,
+  city text,
+  CONSTRAINT profiles_pkey PRIMARY KEY (id),
+  CONSTRAINT profiles_id_fkey FOREIGN KEY (id) REFERENCES auth.users(id)
+);
+```
+
 ---
 
 ## ☁️ Deploying to Vercel
