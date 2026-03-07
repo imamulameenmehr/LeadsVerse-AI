@@ -2,6 +2,17 @@
 
 ![Leadsverse AI Dashboard](https://drive.google.com/uc?export=view&id=1RWht1rAS9LIp-iQ7ExTtePBj5Kx9fchX)
 
+<div align="center">
+  <h3>Powered & Backed By:</h3>
+  <a href="https://rbgroup.com.pk/" target="_blank">
+    <img src="https://rbgroup.com.pk/wp-content/uploads/2026/02/bg-remove-dark-1-1-200x174.png" alt="RB Group Logo" height="100"/>
+  </a>
+  <br/>
+  <i>Innovation driven by <a href="https://rbgroup.com.pk/">RB Group Pakistan</a>.</i>
+</div>
+
+---
+
 **Leadsverse AI** is a cutting-edge, open-source Customer Relationship Management (CRM) platform designed to supercharge your sales teams. It combines a sleek, premium dark-mode interface with intelligent AI-driven outreach capabilities, allowing your Extractors and Closers to focus entirely on converting leads into revenue without the pain of manual data entry.
 
 > **Note:** This platform is proudly **Open Source**. You are free to fork, clone, and deploy it for your own business or agency!
