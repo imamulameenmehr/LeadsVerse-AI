@@ -62,6 +62,9 @@ Track over 20+ specific data points per lead, including:
 ### ⚡ Lead Activity Feed & AI Logging
 ![Lead Activity](https://drive.google.com/uc?export=view&id=188r8RZiPrwij2W2U258lg8Pu8_-E5aai)
 
+### 🤖 AI Outreach Personalization
+![AI Outreach](https://drive.google.com/uc?export=view&id=1Qo_qhkDqRFtLDo7t1_G5BCjvNDfK7Y_m)
+
 ### 💰 Lead Financials & Quotations
 ![Lead Financials](https://drive.google.com/uc?export=view&id=16K6TrS1dddOpXrPqtk-hmP0_TanwcZuz)
 
