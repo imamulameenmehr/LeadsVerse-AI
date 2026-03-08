@@ -32,7 +32,7 @@ export async function POST(req: NextRequest) {
             { auth: { autoRefreshToken: false, persistSession: false } }
         )
 
-        const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000'
+        const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || req.nextUrl.origin || 'http://localhost:3000'
 
         const { data: inviteData, error } = await supabaseAdmin.auth.admin.inviteUserByEmail(email, {
             redirectTo: `${siteUrl}/login`,
